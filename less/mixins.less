@@ -9,3 +9,7 @@
 	-webkit-transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
 			transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
 }
+.font-size(@fontSizePX:16px) {
+	font-size: (@fontSizePX);
+	font-size: unit((@fontSizePX*0.0625),rem);
+}
