@@ -1,0 +1,11 @@
+.box-sizing(@boxSizing:@defaultBoxSizing) {
+	-webkit-box-sizing: @boxSizing;
+	   -moz-box-sizing: @boxSizing;
+			box-sizing: @boxSizing;
+}
+.transition(@transitionProperty:@defaultTransitionProperty, @transitionDuration:@defaultTransitionDuration,
+			@transitionTimingFunction:@defaultTransitionTimingFunction, @transitionDelay:@defaultTransitionDelay) {
+	   -moz-transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
+	-webkit-transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
+			transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
+}

@@ -63,17 +63,12 @@
 01 Import Fonts
 ---------------------------------------------------------------------------------------------------- */
 
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+//@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 
 /*
 02 Defaults
 ---------------------------------------------------------------------------------------------------- */
-
-html {
-
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -109,9 +104,7 @@ textarea,
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+	.box-sizing();
 }
 
 a,
@@ -120,19 +113,17 @@ button,
 input[type="button"],
 input[type="submit"],
 .btn {
-	-moz-transition: all 0.1s ease-in-out;
-	-webkit-transition: all 0.1s ease-in-out;
-	transition: all 0.1s ease-in-out;
+	.transition();
 }
 
 ::-moz-selection {
-	background-color: #1e1e1e;
-	color: #fff;
+	background-color: @selectionColorBg;
+	color: @selectionColorText;
 }
 
 ::selection {
-	background-color: #1e1e1e;
-	color: #fff;
+	background-color: @selectionColorBg;
+	color: @selectionColorText;
 }
 
 a img {
