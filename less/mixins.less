@@ -9,7 +9,19 @@
 	-webkit-transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
 			transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
 }
-.font-size(@fontSizePX:16px) {
+.font-size-rem(@fontSizePX:16px) {
 	font-size: (@fontSizePX);
 	font-size: unit((@fontSizePX*0.0625),rem);
 }
+
+
+.padding-rem(@paddingTopPX:0px, @paddingRightPX:0px, @paddingBottomPX:0px, @paddingLeftPX:0px) {
+	padding: @paddingTopPX @paddingRightPX @paddingBottomPX @paddingLeftPX;
+	padding: unit((@paddingTopPX*0.0625), rem) unit((@paddingRightPX*0.0625), rem) unit((@paddingBottomPX*0.0625), rem) unit((@paddingLeftPX*0.0625), rem);
+}
+.margin-rem(@marginTopPX:0px, @marginRightPX:0px, @marginBottomPX:0px, @marginLeftPX:0px) {
+	margin: @marginTopPX @marginRightPX @marginBottomPX @marginLeftPX;
+	margin: unit((@marginTopPX*0.0625), rem) unit((@marginRightPX*0.0625), rem) unit((@marginBottomPX*0.0625), rem) unit((@marginLeftPX*0.0625), rem);
+}
+
+
