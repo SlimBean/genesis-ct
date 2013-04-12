@@ -9,9 +9,10 @@
 	-webkit-transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
 			transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
 }
-.font-size-rem(@fontSizePX:16px) {
-	font-size: (@fontSizePX);
-	font-size: unit((@fontSizePX*0.0625),rem);
+.font-size-rem(@fontSizePX:16) {
+	@fontSizeRem: (@fontSizePX*0.0625);
+	font-size: ~"@{fontSizePX}px";
+	font-size: ~"@{fontSizeRem}rem";
 }
 
 
