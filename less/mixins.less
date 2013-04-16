@@ -1,21 +1,9 @@
-.box-sizing(@boxSizing:@defaultBoxSizing) {
-	-webkit-box-sizing: @boxSizing;
-	   -moz-box-sizing: @boxSizing;
-			box-sizing: @boxSizing;
-}
-.transition(@transitionProperty:@defaultTransitionProperty, @transitionDuration:@defaultTransitionDuration,
-			@transitionTimingFunction:@defaultTransitionTimingFunction, @transitionDelay:@defaultTransitionDelay) {
-	   -moz-transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
-	-webkit-transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
-			transition: @transitionProperty @transitionDuration @transitionTimingFunction @transitionDelay;
-}
+//Rem Conversion
 .font-size-rem(@fontSizePX:16) {
 	@fontSizeRem: (@fontSizePX*0.0625);
 	font-size: ~"@{fontSizePX}px";
 	font-size: ~"@{fontSizeRem}rem";
 }
-
-
 .padding-rem(@paddingTopPX:0px, @paddingRightPX:0px, @paddingBottomPX:0px, @paddingLeftPX:0px) {
 	padding: @paddingTopPX @paddingRightPX @paddingBottomPX @paddingLeftPX;
 	padding: unit((@paddingTopPX*0.0625), rem) unit((@paddingRightPX*0.0625), rem) unit((@paddingBottomPX*0.0625), rem) unit((@paddingLeftPX*0.0625), rem);
@@ -25,4 +13,51 @@
 	margin: unit((@marginTopPX*0.0625), rem) unit((@marginRightPX*0.0625), rem) unit((@marginBottomPX*0.0625), rem) unit((@marginLeftPX*0.0625), rem);
 }
 
+//Animation
+.transition(@transitionProperty:@defaultTransitionProperty, @transitionDuration:@defaultTransitionDuration,
+			@transitionTimingFunction:@defaultTransitionTimingFunction, @transitionDelay:@defaultTransitionDelay) {
+	   -moz-transition: @arguments;
+	-webkit-transition: @arguments;
+			transition: @arguments;
+}
+//Layout
+.box-sizing(@boxSizing:@defaultBoxSizing) {
+	-webkit-box-sizing: @boxSizing;
+	   -moz-box-sizing: @boxSizing;
+			box-sizing: @boxSizing;
+}
+
+//CSS3
+.border-radius(@value:0;) {
+	-webkit-border-radius: @value; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4  */
+            border-radius: @value; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+          background-clip: padding-box;
+}
+.box-shadow(@value:0) {
+	-webkit-box-shadow:@value; 
+            box-shadow:@value;
+}
+.linear-gradient(@colorStart:#fff; @colorStop:#000) {
+		background-color: @colorStart;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@colorStart), to(@colorStop)); /* Chrome, Safari 4+ */
+	background-image: -webkit-linear-gradient(top, @colorStart, @colorStop); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+	background-image:    -moz-linear-gradient(top, @colorStart, @colorStop); /* Firefox 3.6-15 */
+	background-image:      -o-linear-gradient(top, @colorStart, @colorStop); /* Opera 11.10-12.00 */
+	background-image:         linear-gradient(to bottom, @colorStart, @colorStop); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+.rotate(@value:0;) {
+	-webkit-transform: ~"rotate(@{value}deg)";
+       -moz-transform: ~"rotate(@{value}deg)";
+        -ms-transform: ~"rotate(@{value}deg)";
+         -o-transform: ~"rotate(@{value}deg)";
+            transform: ~"rotate(@{value}deg)";
+}
+.scale(@value:1) {
+	-webkit-transform: scale(@value);
+       -moz-transform: scale(@value);
+        -ms-transform: scale(@value);
+         -o-transform: scale(@value);
+            transform: scale(@value);
+}
 
