@@ -60,4 +60,17 @@
          -o-transform: scale(@value);
             transform: scale(@value);
 }
+.translate(@valueX, @valueY) {
+  -webkit-transform: translate(@x, @y);
+     -moz-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y);
+       -o-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
 
+//3D Transforms
+.backface-visibility {
+	-webkit-backface-visibility: @visibility;
+	   -moz-backface-visibility: @visibility;
+	        backface-visibility: @visibility;
+}
