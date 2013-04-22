@@ -1,2 +1,53 @@
-/*Project non-specific styling should go here
-*/
+//Project non-specific styling should go here
+
+// Side Menu 
+
+#sidebar .menu {
+	clear: both;
+	display: block;
+	li {
+		display: inline-block;
+		float: left;
+		clear: left;
+		list-style-type: none;
+		text-align: left;
+		margin-bottom: 0;
+		position: relative;
+		width:150px;
+		&:hover {
+			background-color: #fff;
+		}
+		a {
+			display: block;
+			.padding-rem(5px,5px,5px,5px);
+			position: relative;
+			text-decoration: none;
+			color: @linkColor;
+			&:hover {
+				color:@linkColorHover;
+			}
+		}
+		ul {
+			.transition();
+			max-height:0;
+			position: absolute;
+			left:100%;
+			top: 0;
+			width: 212px;
+			z-index: 99;
+			overflow: hidden;
+			a {
+				border-top: none;
+				.padding-rem(5px; 5px; 5px; 5px);
+				position: relative;
+				width: 170px;
+				background-color: #fff;
+			}
+		}
+		&:hover {
+			ul {
+				max-height:500px;
+			}
+		}
+	}
+}
