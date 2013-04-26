@@ -56,6 +56,11 @@ Version:        0.1.0
 /*
 02 Defaults
 ---------------------------------------------------------------------------------------------------- */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 html,
 body,
 div,
@@ -152,17 +157,6 @@ body {
   background-color: #fff;
   line-height: 1;
 }
-body,
-input,
-select,
-textarea,
-.footer-widgets-1,
-.footer-widgets-2,
-.footer-widgets-3 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 a,
 a:visited,
 button,
@@ -174,12 +168,12 @@ input[type="submit"],
   transition: all 0.1s ease-in-out 0;
 }
 ::-moz-selection {
-  background-color: #1e1e1e;
-  color: #ffffff;
+  background-color: #111834;
+  color: #83dee1;
 }
 ::selection {
-  background-color: #1e1e1e;
-  color: #ffffff;
+  background-color: #111834;
+  color: #83dee1;
 }
 a img {
   border: none;
@@ -219,7 +213,7 @@ input,
   color: #1e1e1e;
 }
 a:hover {
-  color: #1e1e1e;
+  color: #f7b749;
 }
 h2 a,
 h2 a:visited,
@@ -238,7 +232,7 @@ h2 a:hover,
 .genesis-nav-menu li:hover a,
 .genesis-nav-menu li li a:hover,
 .genesis-nav-menu .current-menu-item a {
-  color: #ff2a00;
+  color: #7c211e;
 }
 .post-info,
 .post-meta,
@@ -280,6 +274,7 @@ h6,
 .entry-title a,
 #title {
   font-family: 'Lato', sans-serif;
+  color: #000000;
 }
 /* 03c - Font Size ----------- */
 #title {
@@ -707,7 +702,7 @@ p.pages,
 }
 .genesis-nav-menu.menu-primary,
 .genesis-nav-menu.menu-secondary {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
 .genesis-nav-menu ul {
   float: left;
@@ -1243,6 +1238,89 @@ p.wp-caption-text {
     width: 100%;
   }
 }
-/*Project non-specific styling should go here
-*//*Project specific styling should go here
+#sidebar .menu {
+  clear: both;
+  display: block;
+}
+#sidebar .menu li {
+  display: inline-block;
+  float: left;
+  clear: left;
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 0;
+  position: relative;
+  width: 150px;
+}
+#sidebar .menu li:hover {
+  background-color: #fff;
+}
+#sidebar .menu li a {
+  display: block;
+  padding: 5px 5px 5px 5px;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0.3125rem;
+  position: relative;
+  text-decoration: none;
+  color: #7c211e;
+}
+#sidebar .menu li a:hover {
+  color: #f7b749;
+}
+#sidebar .menu li ul {
+  -moz-transition: all 0.1s ease-in-out 0;
+  -webkit-transition: all 0.1s ease-in-out 0;
+  transition: all 0.1s ease-in-out 0;
+  max-height: 0;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 212px;
+  z-index: 99;
+  overflow: hidden;
+}
+#sidebar .menu li ul a {
+  border-top: none;
+  padding: 5px 5px 5px 5px;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0.3125rem;
+  position: relative;
+  width: 170px;
+  background-color: #fff;
+}
+#sidebar .menu li:hover ul {
+  max-height: 500px;
+}
+.menu-social-media-container li {
+  float: left;
+}
+.menu-social-media-container li a {
+  display: block;
+  height: 32px;
+  margin: 0 0 0 10px;
+  padding: 0;
+  text-indent: -9999px;
+  width: 32px;
+  background-color: #333;
+}
+.menu-social-media-container li a:hover {
+  background-color: #000;
+}
+.social-facebook a {
+  background-image: url(images/32x32_facebook.png);
+}
+.social-googleplus a {
+  background-image: url(images/32x32_googleplus.png);
+}
+.social-linkedin a {
+  background-image: url(images/32x32_linkedin.png);
+}
+.social-pinterest a {
+  background-image: url(images/32x32_pinterest.png);
+}
+.social-rss a {
+  background-image: url(images/32x32_rss.png);
+}
+.social-twitter a {
+  background-image: url(images/32x32_twitter.png);
+}
+/*Project specific styling should go here
 */
