@@ -46,13 +46,6 @@
 
 
 /*
-01 Import Fonts
----------------------------------------------------------------------------------------------------- */
-
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
-
-
-/*
 02 Defaults
 ---------------------------------------------------------------------------------------------------- */
 * {
@@ -412,8 +405,7 @@ h2 a:visited,
 
 #title {
 	line-height: 1;
-	margin: 40px 0 8px;
-	margin: 2.5rem 0 0.5rem;
+	.margin-rem(40px, 0, 8px, 0);
 }
 
 .header-image #title {
@@ -714,7 +706,7 @@ p.pages,
 }
 
 .genesis-nav-menu li ul ul {
-	margin: -55px 0 0 211px;
+	.margin-rem(-55px, 0, 0, 211px);
 }
 
 .genesis-nav-menu li:hover ul ul,
@@ -1208,14 +1200,12 @@ p.wp-caption-text {
 	}
 
 	.genesis-nav-menu a {
-		padding: 20px 16px;
-		padding: 1.25rem 1rem;
+		.padding-rem(20px, 16px, 20px, 16px);
 	}
 
 	#title {
 		.margin-rem(16px, 0, 16px, 0);
 	}
-
 	#header .search-form {
 		margin: 32px auto 0;
 		margin: 2rem auto 0;
