@@ -83,7 +83,7 @@ html {
 }
 
 body {
-	background-color: #fff;
+	background-color: @white;
 	line-height: 1;
 }
 
@@ -403,7 +403,7 @@ h2 a:visited,
 /* 04c - Header ----------- */
 
 #header {
-	border-bottom: 2px solid #1e1e1e;
+	border-bottom: 2px solid @grayDarker;
 	min-height: 120px;
 	overflow: hidden;
 	padding-bottom: 32px;
@@ -510,7 +510,7 @@ blockquote::before {
 }
 
 .post-meta {
-	border-top: 1px solid #ccc;
+	border-top: 1px solid @grayPale;
 	.padding-rem(24px, 0, 0, 0);
 }
 
@@ -606,7 +606,7 @@ p.pages,
 }
 
 .clear-line {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid @grayPale;
 	.margin-rem(0, 0, 26px, 0);
 }
 
@@ -638,7 +638,7 @@ p.pages,
 .breadcrumb,
 .sticky,
 .taxonomy-description {
-	background-color: #f5f5f5;
+	background-color: @offWhite;
 	.margin-rem(0, 0, 48px, 0);
 	.padding-rem(32px, 32px, 32px, 32px);
 	overflow: hidden;
@@ -662,7 +662,7 @@ p.pages,
 
 .genesis-nav-menu.menu-primary,
 .genesis-nav-menu.menu-secondary {
-	border-bottom: 1px solid @menuBorderBottom;
+	border-bottom: 1px solid @grayPale;
 }
 
 .genesis-nav-menu ul {
@@ -688,18 +688,18 @@ p.pages,
 }
 
 .genesis-nav-menu .highlight-menu-item a {
-	background-color: #1e1e1e;
+	background-color: @grayDarker;
 }
 
 .genesis-nav-menu .highlight-menu-item a:hover {
-	background-color: #ff2a00;
+	background-color: @grayDarker;
 }
 
 .genesis-nav-menu li li a,
 .genesis-nav-menu li li a:link,
 .genesis-nav-menu li li a:visited {
-	background-color: #fff;
-	border: 1px solid #ccc;
+	background-color: @white;
+	border: 1px solid @grayPale;
 	border-top: none;
 	.padding-rem(20px, 20px, 20px, 20px);
 	position: relative;
@@ -846,7 +846,7 @@ h6,
 .navigation li a:hover,
 .navigation li.active a,
 .navigation li.disabled {
-	background-color: #1e1e1e;
+	background-color: @grayDarker;
 	border-radius: 3px;
 	cursor: pointer;
 	.padding-rem(12px, 12px, 12px, 12px);
@@ -854,7 +854,7 @@ h6,
 
 .navigation li a:hover,
 .navigation li.active a {
-	background-color: #ff2a00;
+	background-color: @orange;
 }
 
 
@@ -910,8 +910,8 @@ label {
 }
 
 .comment {
-	background-color: #f5f5f5;
-	border: 2px solid #fff;
+	background-color: @offWhite;
+	border: 2px solid @white;
 	border-right: none;
 }
 
@@ -941,7 +941,7 @@ label {
 }
 
 .sidebar .widget {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid @grayPale;
 	.margin-rem(0, 0, 32px, 0);
 	.padding-rem(0, 0, 32px, 0);
 	overflow: hidden;
@@ -963,7 +963,7 @@ label {
 }
 
 #footer .wrap {
-	border-top: 2px solid #1e1e1e;
+	border-top: 2px solid @grayDarker;
 	overflow: hidden;
 	.padding-rem(48px, 0, 48px, 0);
 }
@@ -980,7 +980,7 @@ label {
 /* 11a - Footer Widgets ----------- */
 
 .footer-widgets {
-	border-top: 2px solid #1e1e1e;
+	border-top: 2px solid @grayDarker;
 	clear: both;
 	line-height: 1.5;
 	overflow: hidden;
@@ -1013,10 +1013,10 @@ label {
 input,
 select,
 textarea {
-	background-color: #fff;
-	border: 1px solid #ddd;
+	background-color: @white;
+	border: 1px solid @grayPaler;
 	border-radius: 3px;
-	box-shadow: 0 0 5px #ddd inset;
+	box-shadow: 0 0 5px @grayPaler inset;
 	.padding-rem(16px, 16px, 16px, 16px);
 	width: 100%;
 }
@@ -1031,7 +1031,7 @@ button,
 input[type="button"],
 input[type="submit"],
 .btn {
-	background-color: #1e1e1e;
+	background-color: @grayDarker;
 	border: none;
 	box-shadow: none;
 	cursor: pointer;
@@ -1043,7 +1043,7 @@ button:hover,
 input:hover[type="button"],
 input:hover[type="submit"],
 .btn:hover {
-	background-color: #ff2a00;
+	background-color: @orange;
 }
 
 .enews input[type="submit"],
